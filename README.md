@@ -1,19 +1,26 @@
 # DRAGONfly Simulation
-This repository contains Purdue's autonomous glider "DRAGONfly" simulation model used in Gazebo Simulator to re-enact the flight control system and physic of the real world.
+This repository contains a simulation model for Purdue team's glider "DRAGONfly" for competing in the *NASA FLOATing DRAGON Balloon Challenge.*
+The code is compatible with Gazebo Simulator to re-enact the flight control system and physic of the real world.
 <br />
 
 ## About the Model & Its Purpose
 [NASA FLOATing DRAGON Balloon Challenge](https://floatingdragon.nianet.org/)
 >> Through the FLOATing DRAGON Challenge, NASA seeks innovative ideas and prototypes for a guided data vault recovery system consisting of: 1) a deployer that can be mounted to a HASP-type balloon gondola; and 2) a node that can be dropped and fall gracefully to a pre-determined, safe waypoint for recovery.
+<img src="https://github.com/kmuenpra/Dragonfly-Simulation/blob/main/images/floating_dragon_lg.jpg" width = 250>
+<br />
 
-[Control Algorithm for the DRAGONfly aircraft](https://github.com/kmuenpra/Dragonfly)
+[Control Algorithm for the DRAGONfly aircraft](https://github.com/kmuenpra/Dragonfly) 
+<br />
+
+<img src="https://github.com/kmuenpra/Dragonfly-Simulation/blob/main/images/PurdueDRAGONflyLogoFINAL.png" width = 250>
+<br/>
 
 ## Model Preview
 <img src="https://github.com/kmuenpra/Dragonfly-Simulation/blob/main/images/DRAGONfly.PNG" width=500>
 <img src="https://github.com/kmuenpra/Dragonfly-Simulation/blob/main/images/Dragonfly_model.png">
 
 ## Requirements
-- Ubuntu Linux 22.x
+- Ubuntu Linux 22.x Operating System
 - [Gazebo Simulator 11 (Default Installation)](https://classic.gazebosim.org/tutorials?tut=install_ubuntu)
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
 <br />
@@ -99,13 +106,16 @@ vi sitl_targets_gazebo-classic.cmake
 Inside the command "set(models ...)", Add the airfram name "dragonFly"
 <br />
 
-## Run DRAGONfly model simulaiton
+
+## Run DRAGONfly model Simulation
 Once access into the aforementioned Docker container
 ```
 cd /PX4-Autopilot
 make px4_sitl_default gazebo-classic_dragonFly
 ```
 Additionally, if you have QGroundcontrol, the simulation will automatically connect to GCS.
+<br/>
+
 
 ## Troubleshoots & Future Improvements
 - Imperfect physic in the simulated model
